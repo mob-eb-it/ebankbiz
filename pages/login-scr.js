@@ -91,12 +91,12 @@ function createDialogMessageDownloadApp(msg, focusElAffterClose) {
     modalDialog.setCallback(function (param) {
         var modal = document.getElementById('myModalDialog');
         modal.style.display = "block"
-        // if (isMobile.iOS()) {
-        //     window.location.href = "https://tpb-biz.onelink.me/DD62/eBX";
-        // } else if (isMobile.Android()) {
-        //     window.location.href = "https://tpb-biz.onelink.me/DD62/eBX";
-        // }
-        window.open("https://tpb-biz.onelink.me/DD62/eBX", '_blank').focus();
+        if (isMobile.iOS()) {
+            window.location.href = "https://tpb-biz.onelink.me/DD62/eBX";
+        } else if (isMobile.Android()) {
+            window.location.href = "https://tpb-biz.onelink.me/DD62/eBX";
+        }
+        // window.open("https://tpb-biz.onelink.me/DD62/eBX", '_blank').focus();
     });
 
     modalDialog.onCreateDialog();
