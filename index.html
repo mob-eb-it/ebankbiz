@@ -9,8 +9,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta content="TPBank eBanking" name="description" />
-    <meta content="ebanking, internet banking, internet, banking, mobile banking, mobile, online, tpbank, tienphong, tien phong"
+    <meta content="Chào mừng đến với eBank Biz. Quý khách có thể thực hiện giao dịch mọi lúc mọi nơi nhanh chóng cùng TPBank eBank Biz" name="description" />
+    <meta content="eBank doanh nghiệp, ngân hàng điện tử doanh nghiệp, eBank Biz, ngân hàng số doanh nghiệp, TPBank online,  TPBank eBank Biz, Biz"
         name="keywords" />
     <!--fdfdfdgdgfg-->
     <!--ngoc kute-->
@@ -276,6 +276,31 @@
     </style>
 </head>
 <body ng-controller="AppController">
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v10.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+   </script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="100626868721100">
+    </div>
+    
     <div style="display: none" id="hideAll">
         &nbsp;</div>
     <script type="text/javascript">
