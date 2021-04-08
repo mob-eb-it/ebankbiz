@@ -276,30 +276,32 @@
     </style>
 </head>
 <body ng-controller="AppController">
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v10.0'
-        });
-      };
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
 
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-   </script>
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+     </script>
 
-    <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat"
-      attribution="setup_tool"
-      page_id="100626868721100">
-    </div>
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="100626868721100">
+      </div>
+
+
 
     <div style="display: none" id="hideAll">
         &nbsp;</div>
@@ -507,16 +509,16 @@
                                         <img src="./assets/images/english.png" onclick="changeLanguageOnIB()" style="width: 30px;
                                             vertical-align: baseline !important;">
                                     </div>
-                                    <div class="header-logo-change1" onclick="openLinkInWindows('https://tpb.vn/promotion/hot-offers?utm_source=ebank&amp;utm_medium=click%20&amp;utm_campaign=main-ebank-uu-dai');">
+                                    <div class="header-logo-change1" onclick="openLinkInWindows('https://tpb.vn/khuyen-mai');">
                                         <p style="cursor: pointer; margin: 10px 0 10px; color: #eee; border-right: 1px solid rgba(255,255,255,0.2);"
                                             class="icon-promotions">
                                         </p>
                                     </div>
-                                    <div id="notification-id" class="header-logo-change1" onclick="navController.pushToView('notification/list_notification_scr', true, 'xsl');">
+                                    <!-- <div id="notification-id" class="header-logo-change1" onclick="navController.pushToView('notification/list_notification_scr', true, 'xsl');">
                                         <p style="cursor: pointer; margin: 10px 0 10px; color: #eee; border-right: 1px solid rgba(255,255,255,0.2);
                                             border-left: 1px solid rgba(255,255,255,0.2);" class="icon-notification">
                                         </p>
-                                    </div>
+                                    </div> -->
                                     <div class="notificationId ripple-add-on" style="display: none">
                                         <p class="icon-contact-us">
                                         </p>
@@ -581,19 +583,19 @@
                     <div class="notificationId ripple-add-on" id="btnChangLanguage">
                         <img src='./assets/images/english.png' onclick="changeLanguageOnIB()" style="width: 30px">
                     </div>
-                    <div class="notificationId ripple-add-on" onclick="openLinkInWindows('https://tpb.vn/promotion/hot-offers?utm_source=ebank&utm_medium=click%20&utm_campaign=main-ebank-uu-dai');">
+                    <div class="notificationId ripple-add-on" onclick="openLinkInWindows('https://tpb.vn/khuyen-mai');">
                         <p class='icon-promotions'>
                         </p>
                     </div>
         
                     <!-- SANGNT1 Notification icon top-->
-                    <div id="notification-id" class="notificationId ripple-add-on" onclick="navController.pushToView('notification/list_notification_scr', true, 'xsl');">
+                    <!-- <div id="notification-id" class="notificationId ripple-add-on" onclick="navController.pushToView('notification/list_notification_scr', true, 'xsl');">
                         <p class='icon-notification'>
                         </p>
-                    </div>
+                    </div> -->
                     <a href="tel:1800585885">
                         <div class="notificationId ripple-add-on" style="position: absolute; color: rgb(255, 255, 255);
-                            right: 126px; display: block;">
+                            right: 82px; display: block;">
                             <p class='icon-contact-us'>
                             </p>
                         </div>
@@ -610,9 +612,7 @@
                     <div id="tabHostFailMsg">
                     </div>
                 </div>
-                <div id='tabHost' style="position: relative; width: 100%; height: 100%/*; -moz-border-radius: 10px;
-                    -webkit-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px;
-                    border-top-right-radius: 5px; border-bottom-right-radius: 5px; */">
+                <div id='tabHost' style="position: relative; width: 100%; height: 100%">
                 </div>
                 <!-- khang slider -->
                 <div class="slideshow" id="slideshowV">
@@ -626,7 +626,18 @@
                                 <img id="m2" src="css/img/MPCT.Mobile.jpg"/>
                             </a>
                         </div>
-                    </div>                   
+                    </div>
+                    <!-- MAN HINH IPad -->
+                    <!-- <div id="sliderFrame">
+                        <div id="slider" class="desktopK">
+                            <a href="https://tpb.vn/tin-tuc/tin-tpbank/tpbank-uu-tien-von-cho-cac-du-an-dien-mat-troi-mai-nha" target="_blank">
+                                <img class="d1" src="css/img/Ebank-mobile.jpg" alt="Welcome to Menucool.com"/>
+                            </a>
+                            <a href="https://tpb.vn/tin-tuc/tin-tpbank/them-nhieu-loai-phi-duoc-tpbank-mien-cho-khach-hang-doanh-nghiep" target="_blank">
+                                <img class="d2" src="css/img/PopUp.Mobile.Ebank.MPCT.DN.jpg"/>
+                            </a>
+                        </div>
+                    </div> -->
                 </div>
                 <!-- End khang slider -->
                 <div id="pageJS">
@@ -650,7 +661,7 @@
                                 <span id="SlideFooter1">QRCODE_SCAN_TITLE</span>
                             </div>
                         </div>
-                        <div class="icon_div_out break-slide" onclick="openLinkInWindows('https://tpb.vn/promotion/hot-offers?utm_source=ebank&utm_medium=click%20&utm_campaign=main-ebank-uu-dai');"
+                        <div class="icon_div_out break-slide" onclick="openLinkInWindows('https://tpb.vn/dn-ebank-biz-ngan-hang-dien-tu-ebank-biz');"
                             id="index-non-ebank3">
                             <em class="icon-promotions icon_font_view break-slide" style="color: #dfa1ae"></em>
                             <div class="langNoStyle icon_div_out_title">
@@ -771,39 +782,42 @@
                 <table width="100%" cellspacing="0" cellpadding="0" border="0">                
                     <!-- KHANGTV1.OS -->
                     <tr width="100%">
-                       <td id="slideshowV" width="65%">
+                       <td width="5%"></td>
+                       <td id="slideshowV" width="58%">
                         <!-- MAN HINH DESKTOP -->
                             <div id="sliderFrame">
                                 <div id="slider" class="desktopK">
+                                    <a href="https://tpb.vn/tin-tuc/tin-tpbank/chia-khoa-so-cho-doanh-nghiep-thuc-hien-giao-dich-moi-luc-moi-noi-cung-tpbank-ebank-biz" target="_blank">
+                                        <img class="d1" src="css/img/eBankBiz_KV.jpg"/>
+                                    </a>
                                     <a href="https://tpb.vn/tin-tuc/tin-tpbank/tpbank-uu-tien-von-cho-cac-du-an-dien-mat-troi-mai-nha" target="_blank">
-                                        <img class="d1" src="css/img/DMT.Web.jpg" alt="Welcome to Menucool.com"/>
+                                        <img class="d2" src="css/img/DMT.Web.jpg" alt="Welcome to Menucool.com"/>
                                     </a>
                                     <a href="https://tpb.vn/tin-tuc/tin-tpbank/them-nhieu-loai-phi-duoc-tpbank-mien-cho-khach-hang-doanh-nghiep" target="_blank">
-                                        <img class="d2" src="css/img/MPCT.Web.jpg"/>
+                                        <img class="d3" src="css/img/MPCT.Web.jpg"/>
                                     </a>
                                 </div>
                             </div>
                        </td> 
-                        <td style="padding-top: 0px; padding-bottom: 4%;">
+                       <td width="2%"></td>
+                        <td style="padding-top: 0px; padding-bottom: 4%;" width="40%">
                             <table id="page_Bannerbottom" width="100%" border="0" cellpadding="0" cellspacing="0"
                                 style="height: 103px">
                                 <tr width="100%">
-                                    <!-- <td width="10%" >
-                                       
-                                    </td> -->
-                                    <td id="block_download" width="50%" class="imagelink cblock_download_link">
+                                    <td id="block_download" width="38%" class="imagelink cblock_download_link">
                                         <a  class="block_download_link_bt"
-                                            id="bt_appstore" href="https://apps.apple.com/us/app/tpbank-biz/id1069567888">
-                                        </a><a  class="block_download_link_bt"
+                                            id="bt_appstore" href="https://itunes.apple.com/vn/app/tpbank-mobile/id450464147?mt=8">
+                                        </a>
+                                        <a  class="block_download_link_bt"
                                             id="bt_google_play" href="https://play.google.com/store/apps/details?id=com.tpb.ebmobile">
                                         </a>
                                     </td>
-                                    <td width="40%" id="block_download_qrcode" class="block_download_qr" style="float: left;">
+                                    <td width="45%" id="block_download_qrcode" class="block_download_qr" style="float: left;">
                                     </td>
                                 </tr>
                             </table> 
                        </td>
-                       <td width="5%"></td>
+                       <!-- <td width="5%"></td> -->
                     </tr>
                     <!-- KHANGTV1.OS -->
                 </table>
